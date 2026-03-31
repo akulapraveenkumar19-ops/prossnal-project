@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins;
+background:#111;
+color:white;
+text-align:center;
+}
+
+/* CARD CONTAINER */
+
+.container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* GOLD INVITATION CARD */
+
+.card{
+
+width:420px;
+background:linear-gradient(135deg,#d4af37,#f7e7a1);
+padding:40px;
+border-radius:15px;
+color:#4b2e00;
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+
+transform:scale(0);
+animation:openCard 1.5s forwards;
+
+}
+
+@keyframes openCard{
+
+0%{
+transform:scale(0);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+.card h1{
+font-family:Playfair Display;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.card h2{
+margin-bottom:10px;
+}
+
+.card p{
+margin:5px 0;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+}
+
+.time-box{
+
+background:#fff3cd;
+padding:10px 15px;
+border-radius:8px;
+
+}
+
+.time-box span{
+font-size:12px;
+}
+
+/* QR */
+
+.qr{
+margin-top:20px;
+}
+
+.qr img{
+width:140px;
+}
+
+/* BUTTON */
+
+button{
+
+margin-top:15px;
+padding:12px 25px;
+border:none;
+background:#8b005d;
+color:white;
+border-radius:5px;
+cursor:pointer;
+
+}
+
+button:hover{
+background:#ff4d6d;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_3fa6a1c19d.mp3" type="audio/mp3">
+</audio>
+
+
+<div class="container">
+
+<div class="card">
+
+<h1>Wedding Invitation</h1>
+
+<h2>Rahul ❤️ Sneha</h2>
+
+<p>You are warmly invited to our wedding</p>
+
+<p><b>Date:</b> 20 December 2026</p>
+
+<p><b>Venue:</b> Royal Palace Hall</p>
+
+<h3 style="margin-top:20px;">Wedding Countdown</h3>
+
+<div class="countdown">
+
+<div class="time-box">
+<p id="days">0</p>
+<span>Days</span>
+</div>
+
+<div class="time-box">
+<p id="hours">0</p>
+<span>Hours</span>
+</div>
+
+<div class="time-box">
+<p id="minutes">0</p>
+<span>Minutes</span>
+</div>
+
+<div class="time-box">
+<p id="seconds">0</p>
+<span>Seconds</span>
+</div>
+
+</div>
+
+<div class="qr">
+
+<p style="margin-top:15px;">Guest Entry QR Pass</p>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=WeddingEntryPass">
+
+</div>
+
+<button onclick="shareInvite()">Send via WhatsApp</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* COUNTDOWN TIMER */
+
+let weddingDate=new Date("Dec 20, 2026 18:00:00").getTime();
+
+setInterval(function(){
+
+let now=new Date().getTime();
+
+let distance=weddingDate-now;
+
+let days=Math.floor(distance/(1000*60*60*24));
+let hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+let minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+let seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
+
+
+/* WHATSAPP INVITATION */
+
+function shareInvite(){
+
+let message="You are invited to our Wedding 💍%0A"+
+"Rahul ❤️ Sneha%0A"+
+"Date: 20 December 2026%0A"+
+"Venue: Royal Palace Hall";
+
+window.open("https://wa.me/?text="+message);
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding RSVP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:linear-gradient(135deg,#ffe4ec,#f4f6fb);
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+padding:18px 60px;
+background:#8b005d;
+color:white;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+nav a:hover{
+color:#ffd6e7;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+padding:40px;
+}
+
+.title h1{
+color:#8b005d;
+}
+
+/* COUNTER */
+
+.counter{
+text-align:center;
+font-size:20px;
+color:#8b005d;
+margin-bottom:20px;
+}
+
+/* FORM */
+
+.container{
+display:flex;
+justify-content:center;
+}
+
+.rsvp-card{
+background:white;
+padding:40px;
+width:420px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+padding:12px;
+border:none;
+background:#ff4d6d;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+margin-top:10px;
+}
+
+button:hover{
+background:#ff2a55;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+background:#25D366;
+}
+
+.whatsapp:hover{
+background:#1fb85c;
+}
+
+/* QR CODE */
+
+.qr{
+text-align:center;
+margin-top:20px;
+}
+
+.qr img{
+width:140px;
+}
+
+/* HEART ANIMATION */
+
+.heart{
+position:fixed;
+bottom:-20px;
+color:red;
+font-size:20px;
+animation:float 5s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h2>💍 Wedding RSVP</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="gallary.html">Gallery</a>
+<a href="venue.html">Venue</a>
+
+</nav>
+
+</header>
+
+
+<section class="title">
+
+<h1>Confirm Your Presence</h1>
+<p>We are excited to celebrate with you</p>
+
+</section>
+
+
+<div class="counter">
+
+Guests Confirmed: <span id="guestCount">0</span>
+
+</div>
+
+
+<div class="container">
+
+<div class="rsvp-card">
+
+<input type="text" id="name" placeholder="Guest Name">
+
+<input type="number" id="guests" placeholder="Number of Guests">
+
+<select id="attend">
+
+<option value="Yes">Will Attend</option>
+<option value="No">Cannot Attend</option>
+
+</select>
+
+<button onclick="saveGuest()">Submit RSVP</button>
+<a href="invitation.html">View Invitation
+<button class="whatsapp" onclick="shareWhatsApp()">Share via WhatsApp</button>
+</a>
+<div class="qr">
+
+<p>Your Entry QR Pass</p>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=WeddingEntryPass">
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* SAVE GUEST */
+
+function saveGuest(){
+
+let name=document.getElementById("name").value;
+let guests=document.getElementById("guests").value;
+let attend=document.getElementById("attend").value;
+
+let data={
+name:name,
+guests:guests,
+attend:attend
+};
+
+let guestList=JSON.parse(localStorage.getItem("guests")) || [];
+
+guestList.push(data);
+
+localStorage.setItem("guests",JSON.stringify(guestList));
+
+updateCounter();
+
+alert("RSVP Submitted Successfully 🎉");
+
+}
+
+/* UPDATE COUNTER */
+
+function updateCounter(){
+
+let guestList=JSON.parse(localStorage.getItem("guests")) || [];
+
+document.getElementById("guestCount").innerText=guestList.length;
+
+}
+
+updateCounter();
+
+/* WHATSAPP SHARE */
+
+function shareWhatsApp(){
+
+let message="You are invited to our wedding! Please confirm RSVP.";
+
+let url="https://wa.me/?text="+encodeURIComponent(message);
+
+window.open(url);
+
+}
+
+/* HEART ANIMATION */
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},5000);
+
+},400);
+
+</script>
+
+</body>
+</html>

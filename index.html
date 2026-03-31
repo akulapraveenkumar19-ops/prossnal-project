@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WedMeGood - Wedding Website</title>
+
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#f4f6fb;
+}
+
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:#1b1b7a;
+color:white;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-size:16px;
+}
+
+nav a:hover{
+color:#ff4d6d;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+
+/* HERO */
+
+.hero{
+height:85vh;
+background-image:url('index first image.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.4);
+padding:40px;
+border-radius:10px;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.hero p{
+margin-bottom:25px;
+}
+
+
+/* SEARCH */
+
+.search-box{
+display:flex;
+gap:10px;
+justify-content:center;
+}
+
+.search-box select{
+padding:12px;
+width:200px;
+border:none;
+border-radius:4px;
+}
+
+.search-box button{
+padding:12px 25px;
+background:#ff4d6d;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+border-radius:4px;
+}
+
+.search-box button:hover{
+background:#ff2e55;
+}
+
+
+/* SERVICES */
+
+.services{
+padding:60px;
+text-align:center;
+}
+
+.service-container{
+display:flex;
+gap:30px;
+margin-top:40px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+padding:30px;
+width:220px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+
+/* FOOTER */
+
+footer{
+background:#1b1b7a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+/* FEATURES */
+
+/* FEATURES SECTION */
+
+.features{
+padding:70px;
+text-align:center;
+background:#fff0f6;
+}
+
+.features h2{
+font-size:32px;
+color:#8b005d;
+margin-bottom:40px;
+}
+
+.feature-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+
+/* FEATURE CARD */
+
+.feature-card{
+background:white;
+width:280px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+cursor:pointer;
+}
+
+.feature-card:hover{
+transform:translateY(-12px) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+/* IMAGE */
+
+.feature-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+
+/* TEXT */
+
+.feature-card h3{
+margin:15px 0;
+color:#8b005d;
+}
+
+.feature-card p{
+padding:0 20px 20px;
+font-size:14px;
+color:#555;
+}
+
+
+/* PAYMENT */
+
+.payment{
+padding:60px;
+background:#fff;
+text-align:center;
+}
+
+.payment-cards{
+display:flex;
+gap:30px;
+justify-content:center;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.pay-card{
+background:#f4f6fb;
+padding:30px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.pay-card:hover{
+transform:translateY(-10px);
+}
+
+.pay-card button{
+margin-top:15px;
+padding:10px 20px;
+background:#ff4d6d;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+
+/* DEVELOPER */
+
+.developer{
+padding:60px;
+text-align:center;
+}
+
+.dev-card{
+background:white;
+padding:40px;
+width:320px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.dev-card:hover{
+transform:scale(1.05);
+}
+
+.dev-card button{
+margin-top:15px;
+padding:10px 20px;
+background:#1b1b7a;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+.contact-btn{
+background:#1e63d5;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.contact-btn:hover{
+background:#154bb5;
+}
+footer{
+background:#ff5252;
+color:white;
+padding:60px 80px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+/* COLUMN */
+
+.footer-col{
+width:300px;
+}
+
+.footer-col h2{
+margin-bottom:15px;
+}
+
+.footer-col p{
+color:#ffe6e6;
+line-height:1.6;
+}
+
+/* BUTTON */
+
+.vendor-btn{
+background:#0d1b5e;
+color:white;
+padding:12px 25px;
+border:none;
+margin-top:15px;
+cursor:pointer;
+}
+
+/* SOCIAL ICONS */
+
+.social-icons{
+margin-top:15px;
+}
+
+.social-icons i{
+background:white;
+color:#0d1b5e;
+padding:10px;
+margin-right:8px;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* LOCATION */
+
+.footer-col ul{
+list-style:none;
+padding:0;
+}
+
+.footer-col ul li{
+margin:8px 0;
+}
+
+/* NEWSLETTER */
+
+.newsletter input{
+padding:10px;
+width:220px;
+border:none;
+margin-top:10px;
+}
+
+.newsletter button{
+background:#0d1b5e;
+color:white;
+border:none;
+padding:10px 20px;
+margin-top:10px;
+cursor:pointer;
+}
+.social-icons a{
+margin-right:10px;
+color:#0d1b5e;
+background:white;
+padding:10px;
+border-radius:5px;
+display:inline-block;
+}
+
+.social-icons a:hover{
+background:#0d1b5e;
+color:white;
+}
+.social-icons a {
+  margin: 0 6px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* subtle zoom on hover */
+}
+.video-section{
+text-align:center;
+padding:60px;
+background:#fff0f6;
+}
+
+.video-section video{
+width:70%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<div class="logo">❤️ WedMeGood ❤️</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="service.html">Service</a>
+<a href="vendors.html">Vendors</a>
+<a href="venue.html">Venue</a>
+<a href="e-invites.html">E-Invites</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Your Wedding, Your Way</h1>
+
+<p>Find The Best Wedding Vendors With Thousands Of Trusted Reviews</p>
+
+<div class="search-box">
+
+<select>
+<option>Select Vendor Type</option>
+<option>Photographer</option>
+<option>Makeup Artist</option>
+<option>Decorator</option>
+<option>Catering</option>
+</select>
+
+<select>
+<option>City</option>
+<option>Hyderabad</option>
+<option>Delhi</option>
+<option>Mumbai</option>
+<option>Bangalore</option>
+</select>
+
+<button onclick="searchVendor()">Search</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<h2>Our Wedding Services</h2>
+
+<div class="service-container">
+
+<div class="card">
+<h3>Photography</h3>
+<p>Capture beautiful wedding memories.</p>
+</div>
+
+<div class="card">
+<h3>Makeup</h3>
+<p>Professional bridal makeup artists.</p>
+</div>
+
+<div class="card">
+<h3>Decoration</h3>
+<p>Creative wedding stage decoration.</p>
+</div>
+
+<div class="card">
+<h3>Catering</h3>
+<p>Best quality food services.</p>
+</div>
+
+</div>
+
+</section>
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>Why Choose Us</h2>
+
+<div class="feature-container">
+
+<div class="feature-card">
+
+<img src="laxary wdding.jpeg">
+
+<h3>Luxury Wedding Planning</h3>
+
+<p>Plan your dream wedding with our premium planners and beautiful venue decorations.</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<img src="password.jpeg">
+
+<h3>Secure Online Payment</h3>
+
+<p>Book wedding vendors easily using safe online payment options.</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<img src="rating weding.jpeg">
+
+<h3>Top Rated Vendors</h3>
+
+<p>Find verified photographers, decorators, and makeup artists.</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- PAYMENT -->
+
+<section class="payment">
+
+<h2>Easy Payment Options</h2>
+
+<div class="payment-cards">
+
+<div class="pay-card">
+<h3>UPI Payment</h3>
+<p>Pay using PhonePe, Google Pay, Paytm.</p>
+<button onclick="pay()">Pay Now</button>
+</div>
+
+<div class="pay-card">
+<h3>Credit / Debit Card</h3>
+<p>Secure card payment gateway.</p>
+<button onclick="pay()">Pay Now</button>
+</div>
+
+<div class="pay-card">
+<h3>Net Banking</h3>
+<p>All major banks supported.</p>
+<button onclick="pay()">Pay Now</button>
+</div>
+
+</div>
+<!-- DEVELOPER -->
+
+<section class="developer">
+
+<h2>Website Developer</h2>
+
+<div class="dev-card">
+
+<h3>Praveen Yadav</h3>
+
+<p>Full Stack Web Developer</p>
+
+<p>HTML | CSS | JavaScript | React</p><br>
+<a href="contect developer.html" class="contact-btn">Contact Developer</a>
+
+</div>
+</section>
+</section>
+<section class="video-section">
+
+<h2>Wedding Highlights</h2>
+
+<video controls>
+<source src="video wedding.mp4" type="video/mp4">
+</video>
+
+</section>
+<footer>
+
+<div class="footer-container">
+
+
+<!-- COLUMN 1 -->
+
+<div class="footer-col">
+
+<h2>WedMeGood - Your Personal Wedding Planner</h2>
+
+<p>Plan Your Wedding With Us. WedMeGood Is An Indian Wedding Planning Website</p>
+
+<button class="vendor-btn">Register As A Vendor</button>
+
+<div class="social-icons">
+  <a href="https://facebook.com/akulapraveen" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="40">
+  </a>
+
+  <a href="https://instagram.com/_praveen_yadav009" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40">
+  </a>
+
+  <a href="https://linkedin.com/in/akulapraveen" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="40">
+  </a>
+
+  <a href="https://twitter.com/akulapraveen" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="40">
+  </a>
+
+  <a href="https://pinterest.com/akulapraveen" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Pinterest" width="40">
+  </a>
+</div>
+</div>
+
+
+<!-- COLUMN 2 -->
+
+<div class="footer-col">
+
+<h2>Our Location</h2>
+
+<ul>
+
+<li>1-47, Chakalisheripally, Chinthapally, Nalagonda, Telangana – 
+508250</li>
+
+</ul>
+
+</div>
+
+
+<!-- COLUMN 3 -->
+
+<div class="footer-col newsletter">
+
+<h2>Our Newsletter</h2>
+
+<p>Subscribe For Latest Updates</p>
+
+<input type="email" placeholder="Enter Your Email">
+
+<br>
+
+<button>Subscribe</button>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+ function searchVendor()
+{
+
+alert("Searching Vendors...");
+
+}   
+</script>
+
+</body>
+</html>

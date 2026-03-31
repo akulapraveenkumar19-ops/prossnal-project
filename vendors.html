@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Wedding Vendors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#fdf6f9;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#7b004f;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:60px;
+}
+
+.header h1{
+font-size:42px;
+color:#7b004f;
+}
+
+.header p{
+margin-top:10px;
+color:#666;
+}
+
+
+/* VENDOR LIST */
+
+.vendors{
+padding:40px 80px;
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+
+/* CARD */
+
+.vendor-card{
+display:flex;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.vendor-card:hover{
+transform:scale(1.02);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+
+/* IMAGE */
+
+.vendor-card img{
+width:300px;
+object-fit:cover;
+}
+
+
+/* CONTENT */
+
+.vendor-info{
+padding:25px;
+flex:1;
+}
+
+.vendor-info h2{
+color:#7b004f;
+}
+
+.category{
+background:#ff4d6d;
+color:white;
+padding:4px 10px;
+font-size:12px;
+border-radius:20px;
+display:inline-block;
+margin:8px 0;
+}
+
+.vendor-info p{
+color:#555;
+margin-bottom:10px;
+}
+
+
+/* PRICE */
+
+.price{
+font-weight:600;
+color:#ff4d6d;
+margin-bottom:15px;
+}
+
+
+/* BUTTONS */
+
+.buttons button{
+padding:8px 16px;
+margin-right:10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.contact{
+background:#7b004f;
+color:white;
+}
+
+.book{
+background:#ff4d6d;
+color:white;
+}
+
+
+/* FOOTER */
+
+footer{
+background:#7b004f;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>💍 Wedding</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="vendors.html">Vendors</a>
+<a href="gallery.html">Gallery</a>
+<a href="venue.html">Venue</a>
+
+</div>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="header">
+
+<h1>Our Wedding Vendors</h1>
+
+<p>Professional services for your dream wedding</p>
+
+</section>
+
+
+<!-- VENDOR CARDS -->
+
+<section class="vendors">
+
+
+<!-- PHOTOGRAPHER -->
+
+<div class="vendor-card">
+
+<img src="photograph.jpeg">
+
+<div class="vendor-info">
+
+<h2>Royal Photography</h2>
+
+<span class="category">Photographer</span>
+
+<p>Capture every magical moment with professional wedding photographers.</p>
+
+<div class="price">Starting Price: $1500</div>
+
+<div class="buttons">
+
+<button class="contact">Contact</button>
+
+<button class="book">Book Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DECOR -->
+
+<div class="vendor-card">
+
+<img src="dream wedding.jpeg">
+
+<div class="vendor-info">
+
+<h2>Dream Wedding Decor</h2>
+
+<span class="category">Decoration</span>
+
+<p>Luxury floral decoration and wedding stage design.</p>
+
+<div class="price">Starting Price: $2000</div>
+
+<div class="buttons">
+
+<button class="contact">Contact</button>
+
+<button class="book">Book Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAKEUP -->
+
+<div class="vendor-card">
+
+<img src="makup.jpeg">
+
+<div class="vendor-info">
+
+<h2>Bridal Makeup Studio</h2>
+
+<span class="category">Makeup</span>
+
+<p>Professional bridal makeup and styling services.</p>
+
+<div class="price">Starting Price: $800</div>
+
+<div class="buttons">
+
+<button class="contact">Contact</button>
+
+<button class="book">Book Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CATERING -->
+
+<div class="vendor-card">
+
+<img src="carting.jpeg">
+
+<div class="vendor-info">
+
+<h2>Royal Catering</h2>
+
+<span class="category">Catering</span>
+
+<p>Delicious food and luxury buffet arrangements.</p>
+
+<div class="price">Starting Price: $2500</div>
+
+<div class="buttons">
+
+<button class="contact">Contact</button>
+
+<button class="book">Book Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DJ -->
+
+<div class="vendor-card">
+
+<img src="dj celabration.jpeg">
+
+<div class="vendor-info">
+
+<h2>DJ Celebration</h2>
+
+<span class="category">Music</span>
+
+<p>Professional DJ and music entertainment for weddings.</p>
+
+<div class="price">Starting Price: $700</div>
+
+<div class="buttons">
+
+<button class="contact">Contact</button>
+
+<button class="book">Book Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Wedding Invitation Website</p>
+
+</footer>
+
+
+</body>
+</html>

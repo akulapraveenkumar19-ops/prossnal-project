@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Wedding Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#f4f6fb;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#8b005d;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:16px;
+}
+
+nav a:hover{
+color:#ffd6e7;
+}
+
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:60px;
+background:#fff0f6;
+}
+
+.header h1{
+font-size:42px;
+color:#8b005d;
+}
+
+.header p{
+margin-top:10px;
+color:#555;
+}
+
+
+/* SERVICES */
+
+.services{
+padding:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+/* IMAGE */
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+
+/* CONTENT */
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.card-content h3{
+color:#8b005d;
+margin-bottom:10px;
+}
+
+.card-content p{
+color:#666;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.card-content button{
+background:#ff4d6d;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.card-content button:hover{
+background:#ff2a55;
+}
+
+
+/* FOOTER */
+
+footer{
+background:#8b005d;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+/* CARD ANIMATION */
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+cursor:pointer;
+position:relative;
+}
+
+/* HOVER EFFECT */
+
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* IMAGE ZOOM */
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+/* BUTTON EFFECT */
+
+.card-content button{
+background:#ff4d6d;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:25px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card-content button:hover{
+background:#8b005d;
+transform:scale(1.1);
+}
+
+/* POPUP */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+padding:30px;
+width:400px;
+border-radius:10px;
+text-align:center;
+}
+
+.close{
+float:right;
+font-size:22px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>❤️ Wedding ❤️</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="service.html">Service</a>
+<a href="gallary.html">Gallery</a>
+<a href="RSVP.HTML">RSVP</a>
+<a href="venue.html">Venue</a>
+
+</div>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="header">
+
+<h1>Our Wedding Services</h1>
+
+<p>Everything you need to plan your perfect wedding</p>
+
+</section>
+
+
+<!-- SERVICES SECTION -->
+
+<section class="services">
+
+
+<!-- PHOTOGRAPHY -->
+
+<div class="card">
+
+<img src="photo.jpeg">
+
+<div class="card-content">
+
+<h3>Wedding Photography</h3>
+
+<p>Capture every magical moment with professional photographers.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- MAKEUP -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+
+<div class="card-content">
+
+<h3>Bridal Makeup</h3>
+
+<p>Professional bridal makeup artists for your special day.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- DECORATION -->
+
+<div class="card">
+
+<img src="image decoration.jpeg">
+
+<div class="card-content">
+
+<h3>Wedding Decoration</h3>
+
+<p>Beautiful stage and venue decoration for unforgettable weddings.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- CATERING -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1555244162-803834f70033">
+
+<div class="card-content">
+
+<h3>Catering Service</h3>
+
+<p>Delicious food and catering service for all guests.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- MUSIC -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30">
+
+<div class="card-content">
+
+<h3>DJ & Music</h3>
+
+<p>Professional DJs to make your wedding celebration lively.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- INVITATIONS -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+
+<div class="card-content">
+
+<h3>Invitation Cards</h3>
+
+<p>Beautiful wedding invitation designs and digital invites.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+<!-- WEDDING PLANNER -->
+
+<div class="card">
+
+<img src="plannar.jpeg">
+
+<div class="card-content">
+
+<h3>Wedding Planner</h3>
+
+<p>Professional planners to organize your perfect wedding event.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- VIDEOGRAPHY -->
+
+<div class="card">
+
+<img src="video.jpeg">
+
+<div class="card-content">
+
+<h3>Wedding Videography</h3>
+
+<p>Capture cinematic wedding videos and unforgettable memories.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- BRIDAL DRESS -->
+
+<div class="card">
+
+<img src="drass.jpeg">
+
+<div class="card-content">
+
+<h3>Bridal Dress</h3>
+
+<p>Luxury bridal dresses and designer wedding outfits.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- GROOM STYLING -->
+
+<div class="card">
+
+<img src="style.jpeg">
+
+<div class="card-content">
+
+<h3>Groom Styling</h3>
+
+<p>Elegant groom suits and styling services.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- FLOWER DECOR -->
+
+<div class="card">
+
+<img src="flower.jpeg">
+
+<div class="card-content">
+
+<h3>Flower Decoration</h3>
+
+<p>Beautiful floral decorations for wedding stage and venue.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- WEDDING CAKE -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d">
+
+<div class="card-content">
+
+<h3>Wedding Cake</h3>
+
+<p>Luxury wedding cakes designed specially for your celebration.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- TRANSPORT -->
+
+<div class="card">
+
+<img src="laxary.jpeg">
+
+<div class="card-content">
+
+<h3>Luxury Wedding Cars</h3>
+
+<p>Premium cars and transportation for bride and groom.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- LIGHTING -->
+
+<div class="card">
+
+<img src="lighting.jpeg">
+
+<div class="card-content">
+
+<h3>Lighting Decoration</h3>
+
+<p>Beautiful lighting setup for magical wedding nights.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- MEHENDI -->
+
+<div class="card">
+
+<img src="articles.jpeg">
+
+<div class="card-content">
+
+<h3>Mehendi Artists</h3>
+
+<p>Professional mehendi artists for bridal hand designs.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- SANGEET -->
+
+<div class="card">
+
+<img src="sangith.jpeg">
+
+<div class="card-content">
+
+<h3>Sangeet Event</h3>
+
+<p>Complete sangeet night arrangements and dance floor setup.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- GIFT SERVICE -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a">
+
+<div class="card-content">
+
+<h3>Wedding Gifts</h3>
+
+<p>Luxury return gifts and wedding gift collections.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- HONEYMOON -->
+
+<div class="card">
+
+<img src="hon.jpeg">
+
+<div class="card-content">
+
+<h3>Honeymoon Packages</h3>
+
+<p>Romantic honeymoon travel packages for newly married couples.</p>
+
+<button>View Details</button>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Wedding Services | Made with ❤️</p>
+
+</footer>
+
+</body>
+
+</html>

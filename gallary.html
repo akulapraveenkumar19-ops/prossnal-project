@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Wedding Gallery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#f4f6fb;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#8b005d;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:60px;
+background:#fff0f6;
+}
+
+.header h1{
+font-size:42px;
+color:#8b005d;
+}
+
+/* FILTER BUTTONS */
+
+.filters{
+text-align:center;
+margin:30px;
+}
+
+.filters button{
+padding:12px 25px;
+margin:5px;
+border:none;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+border-radius:30px;
+font-weight:500;
+transition:0.3s;
+}
+
+.filters button:hover{
+background:#ff2a55;
+transform:scale(1.05);
+}
+
+/* MASONRY GALLERY */
+
+.gallery{
+column-count:4;
+column-gap:15px;
+padding:40px;
+}
+
+.gallery-item{
+break-inside:avoid;
+margin-bottom:15px;
+position:relative;
+overflow:hidden;
+border-radius:10px;
+cursor:pointer;
+}
+
+.gallery-item img{
+width:100%;
+display:block;
+transition:0.4s;
+}
+
+/* IMAGE HOVER EFFECT */
+
+.gallery-item:hover img{
+transform:scale(1.1);
+filter:brightness(80%);
+}
+
+/* OVERLAY TEXT */
+
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+background:rgba(0,0,0,0.5);
+color:white;
+text-align:center;
+padding:10px;
+opacity:0;
+transition:0.3s;
+}
+
+.gallery-item:hover .overlay{
+opacity:1;
+}
+
+/* SLIDER */
+
+.slider{
+max-width:900px;
+margin:50px auto;
+overflow:hidden;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.slides{
+display:flex;
+transition:0.5s;
+}
+
+.slides img{
+width:100%;
+}
+
+/* VIDEO */
+
+.video-section{
+text-align:center;
+padding:60px;
+background:#fff0f6;
+}
+
+.video-section video{
+width:70%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+
+footer{
+background:#8b005d;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>❤️ Wedding ❤️</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
+<a href="venue.html">Venue</a>
+<a href="rsvp.html">RSVP</a>
+
+</div>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="header">
+
+<h1>Wedding Memories Gallery</h1>
+<p>Our Beautiful Wedding Moments</p>
+
+</section>
+
+
+<!-- PHOTO SLIDER -->
+
+<div class="slider">
+
+<div class="slides" id="slides">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<img src="https://images.unsplash.com/photo-1606800052052-a08af7148866">
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+
+</div>
+
+</div>
+
+
+<!-- FILTER BUTTONS -->
+
+<div class="filters">
+
+<button onclick="filterSelection('all')">All</button>
+<button onclick="filterSelection('haldi')">Haldi</button>
+<button onclick="filterSelection('mehendi')">Mehendi</button>
+<button onclick="filterSelection('wedding')">Wedding</button>
+
+</div>
+
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<div class="gallery-item haldi">
+<img src="im1.jpeg">
+<div class="overlay">Haldi Ceremony</div>
+</div>
+
+<div class="gallery-item mehendi">
+<img src="im2.jpeg">
+<div class="overlay">Mehendi Ceremony</div>
+</div>
+
+<div class="gallery-item wedding">
+<img src="im3.jpeg">
+<div class="overlay">Wedding Moment</div>
+</div>
+
+<div class="gallery-item wedding">
+<img src="im4.jpeg">
+<div class="overlay">Wedding Moment</div>
+</div>
+
+<div class="gallery-item wedding">
+<img src="im5.jpeg">
+<div class="overlay">Wedding Moment</div>
+</div>
+
+<div class="gallery-item haldi">
+<img src="im6.jpeg">
+<div class="overlay">Haldi Ceremony</div>
+</div>
+
+<div class="gallery-item mehendi">
+<img src="im7.jpeg">
+<div class="overlay">Mehendi Ceremony</div>
+</div>
+
+<div class="gallery-item wedding">
+<img src="im8.jpeg">
+<div class="overlay">Wedding Moment</div>
+</div>
+
+<div class="gallery-item wedding">
+<img src="im9.jpeg">
+<div class="overlay">Wedding Moment</div>
+</div>
+
+<div class="gallery-item wedding">
+<img src="im10.jpeg">
+<div class="overlay">Wedding Moment</div>
+</div>
+
+</section>
+
+
+<!-- VIDEO -->
+
+<section class="video-section">
+
+<h2>Wedding Highlights</h2>
+
+<video controls>
+<source src="video wedding.mp4" type="video/mp4">
+</video>
+
+</section>
+
+
+<footer>
+
+<p>Made with ❤️ for our wedding</p>
+
+</footer>
+
+
+<script>
+
+/* SLIDER */
+
+let index=0;
+
+setInterval(function(){
+
+let slides=document.getElementById("slides");
+
+index++;
+
+if(index>2){index=0;}
+
+slides.style.transform="translateX(-"+index*100+"%)";
+
+},3000);
+
+
+/* FILTER */
+
+function filterSelection(category){
+
+let items=document.querySelectorAll(".gallery-item");
+
+items.forEach(function(item){
+
+if(category=="all" || item.classList.contains(category)){
+
+item.style.display="block";
+
+}else{
+
+item.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

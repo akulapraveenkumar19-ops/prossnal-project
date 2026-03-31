@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Wedding Events</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#f4f6fb;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#8b005d;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+nav a:hover{
+color:#ffd6e7;
+}
+
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:60px;
+background:#fff0f6;
+}
+
+.header h1{
+font-size:40px;
+color:#8b005d;
+}
+
+.header p{
+color:#555;
+margin-top:10px;
+}
+
+
+/* EVENTS GRID */
+
+.events{
+padding:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+
+/* EVENT CARD */
+
+.event-card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.event-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 35px rgba(0,0,0,0.2);
+}
+
+
+/* IMAGE */
+
+.event-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+
+/* CONTENT */
+
+.event-content{
+padding:20px;
+text-align:center;
+}
+
+.event-content h3{
+color:#8b005d;
+margin-bottom:10px;
+}
+
+.event-content p{
+color:#666;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.date{
+font-weight:600;
+color:#ff4d6d;
+}
+
+.btn{
+margin-top:10px;
+padding:8px 18px;
+background:#ff4d6d;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#ff2a55;
+}
+
+
+/* FOOTER */
+
+footer{
+background:#8b005d;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>❤️ Wedding ❤️</h2>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="events.html">Events</a>
+<a href="gallery.html">Gallery</a>
+<a href="venue.html">Venue</a>
+<a href="rsvp.html">RSVP</a>
+
+</div>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="header">
+
+<h1>Wedding Events</h1>
+
+<p>Join us in celebrating our beautiful wedding journey</p>
+
+</section>
+
+
+<!-- EVENTS -->
+
+<section class="events">
+
+
+<!-- ENGAGEMENT -->
+
+<div class="event-card">
+
+<img src="event1.jpeg">
+
+<div class="event-content">
+
+<h3>Engagement Ceremony</h3>
+
+<p class="date">10 July 2026 | 6:00 PM</p>
+
+<p>Celebrate the beginning of our beautiful journey together.</p>
+
+<button class="btn">View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- HALDI -->
+
+<div class="event-card">
+
+<img src="event2.jpeg">
+
+<div class="event-content">
+
+<h3>Haldi Ceremony</h3>
+
+<p class="date">12 July 2026 | 10:00 AM</p>
+
+<p>A joyful haldi celebration filled with love and colors.</p>
+
+<button class="btn">View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- MEHENDI -->
+
+<div class="event-card">
+
+<img src="event3.jpeg">
+
+<div class="event-content">
+
+<h3>Mehendi Ceremony</h3>
+
+<p class="date">12 July 2026 | 5:00 PM</p>
+
+<p>Beautiful mehendi designs and music celebrations.</p>
+
+<button class="btn">View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- SANGEET -->
+
+<div class="event-card">
+
+<img src="event4.jpeg">
+
+<div class="event-content">
+
+<h3>Sangeet Night</h3>
+
+<p class="date">13 July 2026 | 7:00 PM</p>
+
+<p>Dance and celebrate with music and family.</p>
+
+<button class="btn">View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- WEDDING -->
+
+<div class="event-card">
+
+<img src="event5.jpeg">
+
+<div class="event-content">
+
+<h3>Wedding Ceremony</h3>
+
+<p class="date">14 July 2026 | 11:00 AM</p>
+
+<p>The most special moment of our lives.</p>
+
+<button class="btn">View Details</button>
+
+</div>
+
+</div>
+
+
+<!-- RECEPTION -->
+
+<div class="event-card">
+
+<img src="event6.jpeg">
+
+<div class="event-content">
+
+<h3>Reception Party</h3>
+
+<p class="date">14 July 2026 | 7:00 PM</p>
+
+<p>Celebrate our new journey with friends and family.</p>
+
+<button class="btn">View Details</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Wedding Invitation Website</p>
+
+</footer>
+
+
+</body>
+</html>
